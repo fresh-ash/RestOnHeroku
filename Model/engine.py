@@ -3,7 +3,7 @@ import os
 
 path = os.getcwd() + "/Files/"
 
-file_names = {'adverbs': path + "adverbs.txt", 'adjectives': path + "adjectives.txt",
+file_names = {'adverbs': path + "adverbs.txt", 'adjectives': path + "ajectives.txt",
               'nouns': path + "nouns.txt", 'verbs': path + "verbs.txt"}
 
 conjunctions_list = [ "though", "although", "even though", "while",

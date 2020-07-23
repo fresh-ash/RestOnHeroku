@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI
 from Model.engine import *
 
@@ -46,3 +47,5 @@ async def noun_with_noun(verb: str = None, limit: int = 20):
   return result
 
 
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
