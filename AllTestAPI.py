@@ -22,7 +22,7 @@ def adj_with_noun(noun: str = None, limit: int = 20):
                                     get_words(nouns, limit))
   if noun:
     result = get_custom_pair(noun, adjectives, limit)
-  return result
+  return {"message": result}
 
 @app.get("/gameofwords/verb&noun/")
 async def verb_with_noun(noun: str = None, verb: str = None, limit: int = 20):
@@ -32,7 +32,7 @@ async def verb_with_noun(noun: str = None, verb: str = None, limit: int = 20):
     result = get_custom_pair(noun, verbs, limit)
   if verb:
     result = get_custom_pair(verb, nouns, limit)
-  return result
+  return {"message": result}
 
 @app.get("/gameofwords/noun&noun/{noun}")
 async def noun_with_noun(noun: str, limit: int):
@@ -44,7 +44,7 @@ async def noun_with_noun(verb: str = None, limit: int = 20):
                                     get_words(adverbs, limit))
   if verb:
     result = get_custom_pair(verb, adverbs, limit)
-  return result
+  return {"message": result}
 
 
 if __name__ == "__main__":
