@@ -26,12 +26,12 @@ def get_words(list, count):
 def get_random_pair_of_words(x, y):
   result = ""
   for word in x:
-     result = word +" "+ y.pop() + "\n"
+     result += word +" "+ y.pop() + "\n"
   return result
 
 def get_custom_pair(word, list, limit):
   rand_list = get_words(list, limit)
   result = ""
   for i in rand_list:
-    result = i +" "+ word + "\n"
+    result += i +" "+ word + "\n"
   return result
