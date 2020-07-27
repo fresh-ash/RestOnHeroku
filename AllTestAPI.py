@@ -21,7 +21,7 @@ def adj_with_noun(noun: str = None, limit: int = 20):
   result = get_random_pair_of_words(get_words(adjectives, limit),
                                     get_words(nouns, limit))
   if noun:
-    result = get_custom_pair(noun, adjectives, limit)
+    result = get_custom_pair(noun, adjectives, limit, False)
   return {"message": result}
 
 @app.get("/gameofwords/verb&noun/")
@@ -29,7 +29,7 @@ async def verb_with_noun(noun: str = None, verb: str = None, limit: int = 20):
   result = get_random_pair_of_words(get_words(verbs, limit),
                                     get_words(nouns, limit))
   if noun:
-    result = get_custom_pair(noun, verbs, limit)
+    result = get_custom_pair(noun, verbs, limit, False)
   if verb:
     result = get_custom_pair(verb, nouns, limit, True)
   return {"message": result}
