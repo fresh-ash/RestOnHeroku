@@ -31,7 +31,7 @@ async def verb_with_noun(noun: str = None, verb: str = None, limit: int = 20):
   if noun:
     result = get_custom_pair(noun, verbs, limit)
   if verb:
-    result = get_custom_pair(verb, nouns, limit)
+    result = get_custom_pair(verb, nouns, limit, True)
   return {"message": result}
 
 @app.get("/gameofwords/noun&noun/{noun}")
