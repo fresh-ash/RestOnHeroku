@@ -1,3 +1,5 @@
+#!usr/lib/python3
+
 import uvicorn
 from fastapi import FastAPI
 from Model.engine import *
