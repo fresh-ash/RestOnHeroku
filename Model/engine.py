@@ -6,9 +6,7 @@ path = os.getcwd() + "/Files/"
 file_names = {'adverbs': path + "adverbs.txt", 'adjectives': path + "ajectives.txt",
               'nouns': path + "nouns.txt", 'verbs': path + "verbs.txt"}
 
-conjunctions_list = [ "though", "although", "even though", "while",
-                     "if", "only if", "unless", "until",
-]
+
 
 def read_f_as_lines(name):
   file = open(name)
@@ -26,7 +24,7 @@ def get_words(list, count):
 def get_random_pair_of_words(x, y):
   result = ""
   for word in x:
-     result += word +" "+ y.pop() + "\n"
+     result += word +" "+ y.pop() + ","
   return result
 
 def get_custom_pair(word, list, limit, revers):
@@ -34,7 +32,7 @@ def get_custom_pair(word, list, limit, revers):
   result = ""
   for i in rand_list:
     if revers:
-      result += word + " " + i + "\n"
+      result += word + " " + i + ","
     else:
-      result += i + " " + word + "\n"
+      result += i + " " + word + ","
   return result
