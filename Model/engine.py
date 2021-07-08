@@ -29,10 +29,10 @@ def get_random_pair_of_words(x, y):
 
 def get_custom_pair(word, list, limit, revers):
   rand_list = get_words(list, limit)
-  result = ""
+  result = []
   for i in rand_list:
     if revers:
-      result += word + " " + i + ","
+      result.append(word + " " + i)
     else:
-      result += i + " " + word + ","
+      result.append(i + " " + word)
   return result
