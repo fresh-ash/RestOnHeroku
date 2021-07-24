@@ -22,9 +22,9 @@ def get_words(list, count):
   return words
 
 def get_random_pair_of_words(x, y):
-  result = ""
+  result = []
   for word in x:
-     result += word +" "+ y.pop() + ","
+     result.append(word +" "+ y.pop())
   return result
 
 def get_custom_pair(word, list, limit, revers):
